@@ -5,7 +5,7 @@ function AboutMe() {
  return (
   <div className='about-me'>
    <h2 className='about-me__title'>Студент</h2>
-   <div className='about-me__line'></div>
+   <div className='about-me__line about-me__line_order_van'></div>
    <h3 className='about-me__name'>Пётр</h3>
    <p className='about-me__busyness'>Frontend-developer, 21 год</p>
    <p className='about-me__text'>Я родился в подмосковном городе Истра. Сейчас проживая в городе Тверь и учусь в ТвГТУ по специальности инженер. В свободное время занимаюсь спортом. Недавно начал заниматься кодингом. C 2021 года работал в магазине одежды «Off-Price». Во время прохождения курса по веб-разработке, начал стажировку в компании «Salt and Pepper».
@@ -25,7 +25,7 @@ function AboutMe() {
     <img className='about-me__portfolio-image' alt='Стрелка' src={strelka} />
    </a>
    <div className='about-me__line about-me__line_theme_dark'></div>
-   <a className='about-me__portfolio-link' href='https://petrushische.github.io/circle-game/' target="_blank" rel="noopener noreferrer">
+   <a className='about-me__portfolio-link about-me__portfolio-link_number_three' href='https://petrushische.github.io/circle-game/' target="_blank" rel="noopener noreferrer">
     Одностраничное приложение
     <img className='about-me__portfolio-image' alt='Стрелка' src={strelka} />
    </a>

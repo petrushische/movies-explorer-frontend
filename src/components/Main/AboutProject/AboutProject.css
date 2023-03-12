@@ -1,6 +1,7 @@
 .about-project {
- width: 1140px;
- height: 608px;
+ max-width: 1140px;
+ width: 100%;
+ height: 498px;
  margin: 0 auto;
  padding-top: 110px;
 }
@@ -17,7 +18,7 @@
 
 .about-project__line {
  margin-top: 23px;
- width: 1140px;
+ width: 100%;
  height: 1px;
  background-color: #DADADA;
 }
@@ -26,7 +27,7 @@
 .about-project__subtitle {
  margin: 0;
  margin-top: 70px;
- width: 550px;
+ width: 48.25%;
  display: inline-block;
  font-style: normal;
  font-weight: 400;
@@ -37,7 +38,7 @@
 }
 
 .about-project__subtitle:nth-of-type(2) {
- margin-left: 40px;
+ margin-left: 3.5%;
 }
 
 /*Конец подзаголовок*/
@@ -50,29 +51,29 @@
  font-size: 14px;
  line-height: 20px;
  color: #FFFFFF;
- width: 550px;
+ width: 48.25%;
  display: inline-block;
 }
 
 .about-project__text:nth-of-type(2) {
- margin-left: 40px;
+ margin-left: 3.5%;
 }
 
 /* Шкала прогресса*/
 .about-project__progress-bar {
- width: 1140px;
+ width: 100%;
  height: 36px;
  margin-top: 110px;
 }
 
 .about-project__backend-block {
  display: inline-block;
- width: 228px;
+ width: 20%;
  height: 100%;
  background-color: #3DDC84;
 }
 
-.about-project__backend-text {
+.about-project__block-text {
  margin: 0;
  margin-top: 9px;
  font-style: normal;
@@ -86,29 +87,22 @@
 
 .about-project__frontend-block {
  display: inline-block;
- width: 912px;
+ width: 80%;
  height: 100%;
  background-color: #303030;
 }
 
-.about-project__frontend-text {
- margin: 0;
- margin-top: 9px;
- font-style: normal;
- font-weight: 400;
- font-size: 14px;
- line-height: 17px;
- text-align: center;
+.about-project__block-text_color_white {
  color: #FFFFFF;
 }
 
 /* Конец Шкала прогресса */
 
 .about-project__progress-bar-caption {
- margin: 0;
- margin-left: 14px;
+ margin-top: 14px;
+ margin-bottom: 0;
  display: inline-block;
- width: 200px;
+ width: 20%;
  font-style: normal;
  font-weight: 500;
  font-size: 14px;
@@ -118,5 +112,123 @@
 }
 
 .about-project__progress-bar-caption:nth-of-type(2) {
- margin-left: 370px;
+ margin-left: 30.2%;
+}
+
+
+
+@media screen and (max-width: 1270px) {
+ .about-project {
+  width: 89%;
+ }
+}
+
+@media screen and (max-width: 768px) {
+ .about-project {
+  width: 87%;
+  height: 495px;
+  padding-top: 90px;
+ }
+
+ .about-project__text {
+  margin-top: 22px;
+  font-size: 12px;
+  line-height: 18px;
+ }
+
+ .about-project__progress-bar {
+  margin-top: 93px;
+ }
+}
+
+@media screen and (max-width: 765px) {
+ .about-project {
+  width: 95%;
+  height: 100%;
+  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+ }
+
+ .about-project__title {
+  order: -4;
+  font-size: 18px;
+  line-height: 22px;
+ }
+
+ .about-project__line {
+  margin-top: 28px;
+  order: -3;
+ }
+
+ .about-project__subtitle {
+  margin-top: 60px;
+  font-size: 18px;
+  line-height: 22px;
+ }
+
+ .about-project__subtitle_number_van {
+  order: -2;
+ }
+
+ .about-project__subtitle:nth-of-type(2) {
+  margin-left: 0;
+ }
+
+ .about-project__text {
+  margin-top: 16px;
+  font-size: 11px;
+  line-height: 16px;
+ }
+
+ .about-project__text:nth-of-type(2) {
+  margin-left: 0;
+ }
+
+ .about-project__text_number_van {
+  order: -1;
+ }
+
+ .about-project__progress-bar {
+  margin-top: 60px;
+ }
+
+ .about-project__progress-bar-caption {
+  margin-top: 10px;
+  font-size: 11px;
+  line-height: 13px;
+ }
+
+ .about-project__progress-bar-caption:nth-of-type(2) {
+  margin-left: 50%;
+  margin-top: -17px;
+  margin-bottom: 70px;
+ }
+
+ .about-project__block-text {
+  margin-top: 13px;
+  font-size: 11px;
+  line-height: 13px;
+ }
+}
+
+@media screen and (max-width: 500px) {
+ .about-project__subtitle {
+  width: 100%;
+ }
+
+ .about-project__text {
+  width: 100%;
+ }
+}
+
+@media screen and (max-width: 400px) {
+
+ .about-project__subtitle {
+  width: 100%;
+ }
+
+ .about-project__text {
+  width: 100%;
+ }
 }
