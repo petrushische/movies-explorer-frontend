@@ -1,6 +1,6 @@
 import React from 'react';
 import './MoviesCardList.css'
-import cards from '../../../utils/dataCards'
+import { cards } from '../../../utils/dataCards'
 import MoviesCard from '../MoviesCard/MoviesCard';
 function MoviesCardList() {
  const [visible, SetVisible] = React.useState(false)

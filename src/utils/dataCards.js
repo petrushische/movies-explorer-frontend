@@ -11,7 +11,7 @@ import img_10 from '../images/photo10.png'
 import img_11 from '../images/photo11.png'
 import img_12 from '../images/photo12.png'
 
-const cards = [
+export const cards = [
  {
   id: 1,
   src: img_1,
@@ -85,5 +85,28 @@ const cards = [
   time: '1ч 17м'
  },
 ]
+export const cardsSave = [
+ {
+  id: 1,
+  src: img_1,
+  text: '33 слова о дизайне',
+  time: '1ч 17м'
+ },
+ {
+  id: 2,
+  src: img_2,
+  text: 'Киноальманах «100 лет дизайна»',
+  time: '1ч 17м'
+ },
+ {
+  id: 3,
+  src: img_3,
+  text: 'В погоне за Бенкси',
+  time: '1ч 17м'
+ }
+]
 
-export default cards
+
+
+
+
