@@ -1,6 +1,6 @@
 import "./Header.css"
 import logo from "../../images/header__logo.svg"
-function header() {
+function Header() {
  return (
   <header className="header">
    <div className="header__wrapper">
@@ -13,4 +13,4 @@ function header() {
   </header>
  )
 }
-export default header
+export default Header

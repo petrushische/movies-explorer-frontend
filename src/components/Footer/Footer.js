@@ -1,6 +1,6 @@
 import './Footer.css'
 
-function footer() {
+function Footer() {
  const data = new Date().getFullYear();
  return (
   <footer className='footer'>
@@ -17,4 +17,4 @@ function footer() {
  );
 }
 
-export default footer
+export default Footer

@@ -5,12 +5,12 @@ import Techs from './Techs/Techs';
 import AboutMe from './AboutMe/AboutMe';
 function Main() {
  return (
-  <>
+  <section className='main'>
    <Promo />
    <AboutProject />
    <Techs />
    <AboutMe />
-  </>
+  </section>
  );
 }
 

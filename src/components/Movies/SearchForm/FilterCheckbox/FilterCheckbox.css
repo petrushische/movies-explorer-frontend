@@ -1,0 +1,78 @@
+.search-form__label {
+ margin-top: 32px;
+ display: flex;
+ font-style: normal;
+ font-weight: 400;
+ font-size: 13px;
+ line-height: 18px;
+ color: #FFFFFF;
+}
+
+.search-form__checkbox {
+ margin: 0;
+ position: relative;
+ width: 36px;
+ height: 20px;
+ margin-right: 14px;
+}
+
+.search-form__checkbox::after {
+ content: "";
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background: #EBEBEB;
+ border-radius: 20px;
+ outline: 1px solid black;
+ background-image: url(../../../../images/krug_black.svg);
+ background-repeat: no-repeat;
+ background-position: left;
+}
+
+.search-form__checkbox:checked:after {
+ background: #3DDC84;
+ background-image: url(../../../../images/Krug.svg);
+ background-repeat: no-repeat;
+ background-position: right;
+}
+
+.search-form__checkbox:hover {
+ cursor: pointer;
+}
+
+#checkbox-text {
+ margin: 0;
+}
+
+
+@media screen and (max-width: 768px) {
+ .search-form__label {
+  justify-content: flex-end;
+  margin-top: 30px;
+ }
+
+ .search-form__checkbox {
+  margin-right: 0;
+  margin-left: 16px;
+ }
+
+ #checkbox-text {
+  order: -1;
+ }
+}
+
+@media screen and (max-width: 400px) {
+ .search-form__label {
+  justify-content: center;
+  margin-top: 40px;
+  font-size: 11px;
+  line-height: 18px;
+ }
+
+ .search-form__checkbox {
+  margin-left: 13px;
+ }
+
+}
