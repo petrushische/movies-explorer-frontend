@@ -1,0 +1,164 @@
+.entry {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ width: 100%;
+ height: 100%;
+ position: relative;
+}
+
+.entry__wrapper-img {
+ margin-top: 70px;
+ width: 396px;
+}
+
+.entry__title {
+ margin: 0;
+ margin-top: 40px;
+ width: 396px;
+ height: 29px;
+ font-style: normal;
+ font-weight: 500;
+ font-size: 24px;
+ line-height: 29px;
+ color: #FFFFFF;
+}
+
+.entry__form {
+ margin-top: 40px;
+ display: flex;
+ flex-direction: column;
+ width: 396px;
+ height: 100%;
+}
+
+.entry__input-name {
+ margin: 0;
+ margin-bottom: 5px;
+ font-style: normal;
+ font-weight: 400;
+ font-size: 10px;
+ line-height: 12px;
+ color: #8B8B8B;
+}
+
+.entry__input {
+ border: none;
+ padding: 0;
+ width: 100%;
+ background: #202020;
+ padding-bottom: 10px;
+ border-bottom: 1px solid #424242;
+ font-weight: 400;
+ font-size: 14px;
+ line-height: 17px;
+ color: #FFFFFF;
+}
+
+.entry__input_type_name {
+ margin-bottom: 24px;
+}
+
+.entry__input_type_email {
+ margin-bottom: 24px;
+}
+
+.entry__input_type_password {
+ margin-bottom: 152px;
+}
+
+.entry__input:focus {
+ outline: none;
+}
+
+.entry__button-register {
+ padding: 0;
+ border: none;
+ height: 45px;
+ background: #4285F4;
+ border-radius: 3px;
+ font-weight: 500;
+ font-size: 14px;
+ line-height: 17px;
+ color: #FFFFFF;
+}
+
+.entry__text {
+ margin: 0;
+ text-align: center;
+ margin-top: 16px;
+ font-weight: 400;
+ font-size: 14px;
+ line-height: 17px;
+ color: #8B8B8B;
+ margin-bottom: 70px;
+}
+
+.entry__text-link {
+ margin-left: 6px;
+ text-decoration: none;
+ font-weight: 400;
+ font-size: 14px;
+ line-height: 17px;
+ color: #4285F4;
+}
+
+@media screen and (max-width: 768px) {
+ .entry__wrapper-img {
+  margin-top: 232px;
+ }
+
+ .entry__text {
+  margin-bottom: 232px;
+ }
+}
+
+@media screen and (max-width: 450px) {
+ .entry__wrapper-img {
+  margin-top: 56px;
+  width: 100%;
+  text-align: center;
+ }
+
+ .entry__title {
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+ }
+
+ .entry__form {
+  margin-top: 80px;
+  width: 320px;
+  align-items: center;
+ }
+
+ .entry__input-name {
+  width: 260px;
+ }
+
+ .entry__input {
+  width: 260px;
+ }
+
+ .entry__input_type_password {
+  margin-bottom: 240px;
+ }
+
+ .entry__button-register {
+  width: 260px;
+  font-size: 12px;
+  line-height: 15px;
+ }
+
+ .entry__text {
+  margin-top: 14px;
+  margin-bottom: 30px;
+  font-size: 12px;
+  line-height: 15px;
+ }
+
+ .entry__text-link {
+  font-size: 12px;
+  line-height: 15px;
+ }
+}

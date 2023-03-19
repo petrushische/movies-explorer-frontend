@@ -6,7 +6,9 @@ import Header from '../Header/Header'
 /*import SavedMovies from '../SavedMovies/SavedMovies';*/
 import Footer from '../Footer/Footer'
 
-import Profile from '../Profile/Profile';
+/*import Profile from '../Profile/Profile';*/
+import Register from '../Register/Register';
+import Login from '../Login/Login';
 function App() {
 
   return (
@@ -15,7 +17,9 @@ function App() {
       {/* <Main />*/}
       {/* <Movies />*/}
       {/*<SavedMovies />*/}
-      <Profile />
+      {/* <Profile /> */}
+      <Register />
+      <Login />
       <Footer />
     </>
   );
