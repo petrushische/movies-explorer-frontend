@@ -9,7 +9,7 @@ function FilterCheckbox() {
  return (
   <>
    <label className="search-form__label" htmlFor="checkbox">
-    <input type="checkbox" className='search-form__checkbox' id="checkbox" onClick={handleChangeCheck}></input>
+    <input type="checkbox" className='search-form__checkbox' onClick={handleChangeCheck}></input>
     <p id='checkbox-text'>Короткометражки</p>
    </label>
   </>

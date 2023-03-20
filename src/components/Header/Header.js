@@ -1,16 +1,13 @@
 import "./Header.css"
-import logo from "../../images/logo.svg"
+import { useLocation } from 'react-router-dom';
+import Navigation from "../Navigation/Navigation";
+import NavigationDark from "../NavigationDark/NavigationDark";
 function Header() {
+ const { pathname } = useLocation();
  return (
-  <header className="header">
-   <div className="header__wrapper">
-    <img src={logo} alt="Логотип" className="header__logo" />
-    <div className="header__wrapper-button">
-     <button type="button" className="header__register" >Регистрация</button>
-     <button type="button" className="header__login">Войти</button>
-    </div>
-   </div>
-  </header>
+  <>
+   {pathname === '/' ? <Navigation /> : <NavigationDark />}
+  </>
  )
 }
 export default Header

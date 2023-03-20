@@ -7,6 +7,7 @@
 }
 
 .profile__title {
+ width: 260px;
  margin: 0;
  margin-top: 74px;
  font-style: normal;
@@ -87,6 +88,7 @@
 
  .profile__title {
   margin-top: 236px;
+  width: 210px;
  }
 
  .profile__form {
