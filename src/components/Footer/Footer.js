@@ -5,7 +5,8 @@ function Footer() {
  const { pathname } = useLocation();
  const data = new Date().getFullYear();
  return (
-  <footer className={`footer ${pathname === '/profile' || pathname === '/signin' || pathname === '/signup' ? 'footer-hiden' : ''}`}>
+  <footer className={`footer ${pathname === '/profile' || pathname === '/signin' || pathname === '/signup' ? 'footer-hiden' : ''}
+  ${pathname !== '/' & pathname !== '/movies' & pathname !== '/saved-movies' & pathname !== '/profile' & pathname !== '/signin' & pathname !== '/signup' ? 'footer-hiden' : ''}`}>
    <h2 className='footer__title'>Учебный проект Яндекс.Практикум х BeatFilm.</h2>
    <div className='footer__line'></div>
    <div className='footer__wrapper'>

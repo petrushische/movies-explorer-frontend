@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import { Switch, Redirect } from 'react-router-dom';
+import { Switch } from 'react-router-dom';
 import './App.css';
 import Header from '../Header/Header'
 import Main from '../Main/Main'
@@ -12,9 +12,8 @@ import Profile from '../Profile/Profile';
 import Register from '../Register/Register';
 import Login from '../Login/Login';
 
-/*import ErrorNotFound from '../ErrorNotFound/ErrorNotFound';*/
+import ErrorNotFound from '../ErrorNotFound/ErrorNotFound';
 function App() {
-
   return (
     <>
       <Header />
@@ -38,7 +37,7 @@ function App() {
           <Register />
         </Route>
         <Route patch='/*'>
-          {/* <ErrorNotFound />*/}  <Redirect to='/'></Redirect>
+          <ErrorNotFound />
         </Route>
       </Switch>
       <Footer />

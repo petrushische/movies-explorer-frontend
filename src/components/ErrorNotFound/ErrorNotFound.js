@@ -1,9 +1,6 @@
 import { useHistory } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
 import './ErrorNotFound.css'
 function ErrorNotFound() {
- const { pathname } = useLocation();
- console.log(pathname === '/*')
  const history = useHistory()
  function goBack() {
   history.goBack()
@@ -16,5 +13,4 @@ function ErrorNotFound() {
   </section>
  );
 }
-/*console.log(pathname !== '/' || pathname !== '/movies' || pathname !== '/saved-movies' || pathname !== '/profile' || pathname !== '/signin' || pathname !== '/signup')*/
 export default ErrorNotFound;

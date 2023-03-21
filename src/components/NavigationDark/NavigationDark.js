@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import './NavigationDark.css'
 import logo from "../../images/logo.svg"
@@ -15,7 +15,8 @@ function NavigationDark() {
  }
  return (
   <>
-   <header className={`header-dark ${pathname === '/signin' || pathname === '/signup' ? 'header-dark-hidden' : ''}`}>
+   <header className={`header-dark ${pathname === '/signin' || pathname === '/signup' ? 'header-dark-hidden' : ''} 
+   ${pathname !== '/' & pathname !== '/movies' & pathname !== '/saved-movies' & pathname !== '/profile' & pathname !== '/signin' & pathname !== '/signup' ? 'header-dark-hidden' : ''}`}>
     <nav className="header-dark__wrapper">
      <Link to='/'>
       <img src={logo} alt="Логотип" className="header-dark__logo" />
