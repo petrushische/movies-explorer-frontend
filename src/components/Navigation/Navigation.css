@@ -19,19 +19,21 @@
  height: 38px;
 }
 
+.header__logo:hover {
+ cursor: pointer;
+ opacity: .3;
+}
+
 .header__wrapper-button {
  display: inline;
 }
 
 .header__register {
- padding: 0;
- border: none;
+ text-decoration: none;
  font-weight: 500;
  font-size: 12px;
  line-height: 16px;
  color: #FFFFFF;
- height: 32px;
- background: #073042;
  margin-right: 30px;
 }
 

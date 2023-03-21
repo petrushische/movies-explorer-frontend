@@ -4,6 +4,7 @@
  right: 0;
  width: 100%;
  min-height: 1024px;
+ height: 100%;
  background-color: rgba(0, 0, 0, 0.3);
  display: none;
  justify-content: flex-end;
@@ -19,13 +20,15 @@
  width: 68%;
  height: 1024px;
  background: #202020;
- display: flex;
- flex-direction: column;
- align-items: center;
+
  z-index: 2;
 }
 
-
+.navigation-side__menu {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
 
 .navigation-side__close {
  position: absolute;
@@ -41,38 +44,51 @@
  background-position: center;
 }
 
+.navigation-side__close:hover {
+ opacity: .3;
+ cursor: pointer;
+}
+
 .navigation-side__main {
+ text-decoration: none;
  margin-top: 159px;
- border: none;
- padding: 0;
  font-weight: 500;
  font-size: 18px;
  line-height: 22px;
- background: #202020;
  color: #FFFFFF;
+}
+
+.navigation-side__main:hover {
+ opacity: .3;
+ cursor: pointer;
 }
 
 .navigation-side__movies {
+ text-decoration: none;
  margin-top: 28px;
- border: none;
- padding: 0;
  font-weight: 500;
  font-size: 18px;
  line-height: 22px;
- background: #202020;
  color: #FFFFFF;
- border-bottom: 2px solid #FFFFFF;
+}
+
+.navigation-side__movies:hover {
+ opacity: .3;
+ cursor: pointer;
 }
 
 .navigation-side__save-movies {
+ text-decoration: none;
  margin-top: 28px;
- border: none;
- padding: 0;
  font-weight: 500;
  font-size: 18px;
  line-height: 22px;
- background: #202020;
  color: #FFFFFF;
+}
+
+.navigation-side__save-movies:hover {
+ opacity: .3;
+ cursor: pointer;
 }
 
 .navigation-side__account {
@@ -88,6 +104,15 @@
  font-size: 14px;
  line-height: 16px;
  color: #FFFFFF;
+}
+
+.navigation-side__account:hover {
+ opacity: .3;
+ cursor: pointer;
+}
+
+.link-activ {
+ border-bottom: 2px solid white;
 }
 
 @media screen and (max-width: 400px) {

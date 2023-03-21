@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import './NavigationDark.css'
 import logo from "../../images/logo.svg"
@@ -15,15 +16,23 @@ function NavigationDark() {
  return (
   <>
    <header className={`header-dark ${pathname === '/signin' || pathname === '/signup' ? 'header-dark-hidden' : ''}`}>
-    <div className="header-dark__wrapper">
-     <img src={logo} alt="Логотип" className="header-dark__logo" />
+    <nav className="header-dark__wrapper">
+     <Link to='/'>
+      <img src={logo} alt="Логотип" className="header-dark__logo" />
+     </Link>
      <div className="header-dark__wrapper-button">
-      <button type="button" className="header-dark__movies">Фильмы</button>
-      <button type="button" className="header-dark__save-movies">Сохраненные фильмы</button>
+      <Link className='header-dark__movies' to='movies'>
+       Фильмы
+      </Link>
+      <Link className='header-dark__save-movies' to='/saved-movies'>
+       Сохраненные фильмы
+      </Link>
      </div>
-     <button className='header-dark__account' type='button'>Аккаунт</button>
+     <Link to='/profile'>
+      <button className='header-dark__account' type='button'>Аккаунт</button>
+     </Link>
      <button className='header-dark__side-bar' onClick={handleClickIsOpen}></button>
-    </div>
+    </nav>
    </header>
    <NavigationSide open={openNav} close={handleClickIsClose} />
   </>

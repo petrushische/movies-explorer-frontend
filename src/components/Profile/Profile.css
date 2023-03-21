@@ -54,9 +54,18 @@
  border-bottom: 1px solid #424242;
 }
 
+.profile__input_type_name:focus {
+ border-bottom: 1px solid #8ce4b4;
+}
+
 .profile__input_type_email {
  padding-top: 16px;
+ padding-bottom: 16px;
  margin-bottom: 220px;
+}
+
+.profile__input_type_email:focus {
+ border-bottom: 1px solid #8ce4b4;
 }
 
 .profile_button {
@@ -64,9 +73,14 @@
  padding: 0;
  width: 410px;
  height: 16px;
- background: #202020;
+ background: none;
  font-size: 13px;
  line-height: 16px;
+}
+
+.profile_button:hover {
+ cursor: pointer;
+ opacity: .3;
 }
 
 .profile_button_type_edit {

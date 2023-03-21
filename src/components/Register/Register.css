@@ -12,6 +12,10 @@
  width: 396px;
 }
 
+.entry__logo:hover {
+ opacity: .3;
+}
+
 .entry__title {
  margin: 0;
  margin-top: 40px;
@@ -55,21 +59,35 @@
  color: #FFFFFF;
 }
 
+.entry__input:focus {
+ outline: none;
+}
+
+
 .entry__input_type_name {
  margin-bottom: 24px;
+}
+
+.entry__input_type_name:focus {
+ border-bottom: 1px solid #8ce4b4;
 }
 
 .entry__input_type_email {
  margin-bottom: 24px;
 }
 
+.entry__input_type_email:focus {
+ border-bottom: 1px solid #8ce4b4;
+}
+
 .entry__input_type_password {
  margin-bottom: 152px;
 }
 
-.entry__input:focus {
- outline: none;
+.entry__input_type_password:focus {
+ border-bottom: 1px solid #8ce4b4;
 }
+
 
 .entry__button-register {
  padding: 0;
@@ -81,6 +99,11 @@
  font-size: 14px;
  line-height: 17px;
  color: #FFFFFF;
+}
+
+.entry__button-register:hover {
+ opacity: .3;
+ cursor: pointer;
 }
 
 .entry__text {
@@ -101,6 +124,10 @@
  font-size: 14px;
  line-height: 17px;
  color: #4285F4;
+}
+
+.entry__text-link:hover {
+ opacity: .3;
 }
 
 @media screen and (max-width: 768px) {
