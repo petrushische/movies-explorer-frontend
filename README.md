@@ -2,6 +2,9 @@
 
 frontend дипломного проекта
 
+# Сылка на макет
+https://disk.yandex.ru/d/hcl8GmW9CZeIOQ
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
