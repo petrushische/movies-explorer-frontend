@@ -1,0 +1,9 @@
+.entry__input_type_password-change-margin {
+ margin-bottom: 221px;
+}
+
+@media screen and (max-width: 450px) {
+ .entry__input_type_password-change-margin {
+  margin-bottom: 309px;
+ }
+}

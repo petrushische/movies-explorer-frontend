@@ -49,11 +49,10 @@
 
 @media screen and (max-width: 768px) {
  .card-list {
+  row-gap: 47px;
   width: 92%;
-  /* max-height: 1147px;*/
   margin-bottom: 12px;
   grid-template-columns: 1fr 1fr;
-  /*overflow: hidden;*/
  }
 }
 
