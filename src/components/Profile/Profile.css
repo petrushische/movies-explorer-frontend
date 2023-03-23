@@ -1,0 +1,142 @@
+.profile {
+ width: 100%;
+ height: 626px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+.profile__title {
+ width: 260px;
+ margin: 0;
+ margin-top: 74px;
+ font-style: normal;
+ font-weight: 500;
+ font-size: 24px;
+ line-height: 29px;
+ color: #FFFFFF;
+}
+
+.profile__form {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ margin-top: 123px;
+}
+
+.profile__input {
+ border: none;
+ padding: 0;
+ width: 410px;
+ background: #202020;
+ font-style: normal;
+ font-weight: 400;
+ font-size: 11px;
+ line-height: 13px;
+ color: #FFFFFF;
+ text-align: right;
+}
+
+.profile__input::placeholder {
+ font-weight: 500;
+ font-size: 11px;
+ line-height: 13px;
+ color: #FFFFFF;
+ text-align: start;
+}
+
+.profile__input:focus {
+ outline: none;
+}
+
+.profile__input_type_name {
+ padding-bottom: 16px;
+ border-bottom: 1px solid #424242;
+}
+
+.profile__input_type_name:focus {
+ border-bottom: 1px solid #8ce4b4;
+}
+
+.profile__input_type_email {
+ padding-top: 16px;
+ padding-bottom: 16px;
+ margin-bottom: 220px;
+}
+
+.profile__input_type_email:focus {
+ border-bottom: 1px solid #8ce4b4;
+}
+
+.profile_button {
+ border: none;
+ padding: 0;
+ width: 410px;
+ height: 16px;
+ background: none;
+ font-size: 13px;
+ line-height: 16px;
+}
+
+.profile_button:hover {
+ cursor: pointer;
+ opacity: .3;
+}
+
+.profile_button_type_edit {
+ margin-bottom: 16px;
+ font-weight: 400;
+ color: #FFFFFF;
+}
+
+.profile_button_type_exit {
+ font-weight: 500;
+ color: #EE3465;
+}
+
+
+@media screen and (max-width: 768px) {
+ .profile {
+  height: 950px;
+ }
+
+ .profile__title {
+  margin-top: 236px;
+  width: 210px;
+ }
+
+ .profile__form {
+  margin-top: 96px;
+ }
+
+ .profile__input_type_email {
+  margin-bottom: 210px;
+ }
+}
+
+@media screen and (max-width: 450px) {
+ .profile {
+  height: 706px;
+ }
+
+ .profile__title {
+  margin-top: 70px;
+ }
+
+ .profile__form {
+  margin-top: 80px;
+ }
+
+ .profile__input {
+  width: 260px;
+ }
+
+ .profile__input_type_email {
+  margin-bottom: 379px;
+ }
+
+ .profile_button {
+  width: 300px;
+ }
+
+}

@@ -1,0 +1,103 @@
+.banner__wrapper {
+ background-color: #073042;
+ width: 100%;
+ height: 560px;
+}
+
+
+.banner {
+ max-width: 1140px;
+ width: 100%;
+ height: 100%;
+ margin: 0 auto;
+ display: flex;
+ flex-direction: column;
+}
+
+.banner__title {
+ margin: 0;
+ font-style: normal;
+ font-weight: 400;
+ font-size: 40px;
+ line-height: 52px;
+ letter-spacing: -0.04em;
+ color: #FFFFFF;
+ width: 626px;
+ margin-top: 50px;
+}
+
+.banner__logo {
+ width: 722px;
+ opacity: 0.7;
+ margin-top: 102px;
+ align-self: flex-end;
+}
+
+@media screen and (max-width: 1270px) {
+ .banner {
+  width: 89%;
+ }
+}
+
+
+
+@media screen and (max-width: 1150px) {
+ .banner {
+  width: 100%;
+ }
+
+ .banner__title {
+  align-self: center;
+  text-align: center;
+ }
+
+ .banner__logo {
+  align-self: center;
+ }
+}
+
+@media screen and (max-width: 768px) {
+ .banner__wrapper {
+  height: 844px;
+ }
+
+ .banner__title {
+  width: 680px;
+  margin-top: 300px;
+ }
+
+ .banner__logo {
+  width: 680px;
+  margin-top: 140px;
+ }
+}
+
+@media screen and (max-width: 765px) {
+ .banner__wrapper {
+  height: 630px;
+ }
+
+ .banner {
+  width: 100%;
+ }
+
+ .banner__title {
+  width: 300px;
+  margin-top: 183px;
+  font-size: 31px;
+  line-height: 39px;
+ }
+
+ .banner__logo {
+  margin-top: 60px;
+  width: 450px;
+  height: 250px;
+ }
+}
+
+@media screen and (max-width: 500px) {
+ .banner__logo {
+  width: 320px;
+  height: 230px;
+ }
+}
