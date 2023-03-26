@@ -2,8 +2,9 @@ import React from 'react';
 import './MoviesCard.css'
 import close from '../../../images/close.svg'
 function MoviesCard({ card }) {
+  console.log(card.key === 13)
   return (
-    <li className='card-list__card'>
+    <li className='card-list__card' >
       <img className='card-list__img' src={card.src} alt={card.text} />
       <button className='card-list__button-save card-list__button-save_type_ok' type='button' >
         <img src={close} alt='Галочка' />

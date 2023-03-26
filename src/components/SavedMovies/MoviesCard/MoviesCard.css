@@ -3,14 +3,16 @@
  position: relative;
 }
 
+/*
 .card-list__card:nth-child(n+13) {
  display: none;
 }
-
+*/
+/*
 .card-list__card_type_visible:nth-child(n+13) {
  display: block;
 }
-
+*/
 .card-list__card:hover {
  cursor: pointer;
 }
@@ -110,13 +112,15 @@
   margin-top: 25px;
  }
 
+ /*
  .card-list__card:nth-child(n+9) {
   display: none;
  }
-
+*/
+ /*
  .card-list__card_type_visible:nth-child(n+9) {
   display: block;
- }
+ }*/
 }
 
 @media screen and (max-width: 400px) {
@@ -130,11 +134,13 @@
   line-height: 15px;
  }
 
+ /*
  .card-list__card:nth-child(n+6) {
   display: none;
  }
-
+*/
+ /*
  .card-list__card_type_visible:nth-child(n+6) {
   display: block;
- }
+ }*/
 }
