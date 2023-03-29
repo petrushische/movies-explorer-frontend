@@ -2,7 +2,6 @@ import React from 'react';
 import './MoviesCard.css'
 import close from '../../../images/close.svg'
 function MoviesCard({ card }) {
-  console.log(card.key === 13)
   return (
     <li className='card-list__card' >
       <img className='card-list__img' src={card.src} alt={card.text} />

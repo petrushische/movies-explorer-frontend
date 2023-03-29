@@ -1,6 +1,10 @@
 import './Profile.css'
+import { UserContext } from '../../contexts/CurrentUserContext';
+import React from 'react';
 
-function Profile() {
+function Profile({ cbLogout }) {
+ const userData = React.useContext(UserContext)
+ console.log(userData)
  return (
   <section className='profile'>
    <h2 className='profile__title'>Привет, Виталий!</h2>
@@ -8,8 +12,8 @@ function Profile() {
     <input className='profile__input profile__input_type_name' type='text' placeholder='Имя' required ></input>
     <input className='profile__input profile__input_type_email' type='email' placeholder='E-mail' required ></input>
     <button className='profile_button profile_button_type_edit'>Редактировать</button>
-    <button className='profile_button profile_button_type_exit'>Выйти из акаунта</button>
    </form>
+   <button className='profile_button profile_button_type_exit' onClick={cbLogout}>Выйти из акаунта</button>
   </section>
  );
 }

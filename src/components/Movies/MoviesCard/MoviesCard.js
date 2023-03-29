@@ -9,8 +9,10 @@ function MoviesCard({ card }) {
   return (
     <li className='card-list__card'>
       <div className='card-list__wrapper-img'>
-        <img className='card-list__img' src={'https://api.nomoreparties.co' + card.image.url
-        } alt={card.nameRU} />
+        <a href={card.trailerLink} target="_blank" rel="noopener noreferrer" className='card-list__link'>
+          <img className='card-list__img' src={'https://api.nomoreparties.co' + card.image.url
+          } alt={card.nameRU} />
+        </a>
       </div>
       {
         button ?
@@ -22,7 +24,7 @@ function MoviesCard({ card }) {
       <div className='card-list__wrapper'>
         <h2 className='card-list__title'>{card.nameRU}</h2>
         <div className='card-list__wrapper-time'>
-          <p className='card-list__time'>{card.duration}</p>
+          <p className='card-list__time'>{card.duration} мин</p>
         </div>
       </div>
     </li>
