@@ -7,6 +7,10 @@ import logo from '../../images/logo.svg'
 function Login({ handleLogin, loggedIn }) {
  const [errMessage, setErrMessage] = React.useState('')
 
+
+ function clearError() {
+  setErrMessage('')
+ }
  const {
   register,
   formState: {
@@ -20,8 +24,13 @@ function Login({ handleLogin, loggedIn }) {
   const { email, password } = data
   handleLogin(email, password)
    .catch((err) => {
-    setErrMessage(`Ошибка ${err.status} ${err.statusText}`)
-    console.log(`Ошибка ${err.status} ${err.statusText}`)
+    console.log(err)
+    if (err.status === 401) {
+     setErrMessage('Вы ввели неправильный логин или пароль')
+    } else {
+     setErrMessage('Ошибка на стороне сервера')
+    }
+    setTimeout(clearError, 2000)
    })
   reset()
  }
@@ -41,7 +50,7 @@ function Login({ handleLogin, loggedIn }) {
     <input name='email' className='entry__input entry__input_type_email'  {...register('email',
      {
       required: 'Поле обязательно к заполнению',
-      pattern: { value: /^\S+@\S+\.\S+$/, message: 'Введите корректный адрес' }
+      pattern: { value: /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i, message: 'Введите корректный адрес' }
      }
     )}></input>
     <p className='entry__error'>{errors ? errors.email ? errors.email.message : null : null}</p>

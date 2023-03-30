@@ -7,6 +7,10 @@ import logo from '../../images/logo.svg'
 function Register({ handleRegister, loggedIn }) {
  const [errMessage, setErrMessage] = React.useState('')
 
+ function clearError() {
+  setErrMessage('')
+ }
+
  const {
   register,
   formState: {
@@ -21,8 +25,13 @@ function Register({ handleRegister, loggedIn }) {
   const { name, email, password } = data
   handleRegister(name, email, password)
    .catch((err) => {
-    console.log(`Ошибка ${err.status} ${err.statusText}`)
-    setErrMessage(`Ошибка ${err.status} ${err.statusText}`)
+    console.log(err)
+    if (err.status === 409) {
+     setErrMessage('Пользователь с таким email уже существует')
+    } else {
+     setErrMessage('Ошибка на стороне сервера')
+    }
+    setTimeout(clearError, 2000)
    })
   reset()
  }
@@ -42,6 +51,8 @@ function Register({ handleRegister, loggedIn }) {
     <input className='entry__input entry__input_type_name' type='text' {...register('name',
      {
       required: 'Поле обязательно к заполнению',
+      minLength: { value: 2, message: 'минимум 2 символа' },
+      maxLength: { value: 30, message: 'Максимум 30 символов' },
       pattern: { value: /^[а-яёА-ЯЁa-zA-Z\s-]+$/i, message: 'Поле может содержать только латиницу, кирилицу, пробелы и "-"' }
      })}>
     </input>
@@ -50,7 +61,7 @@ function Register({ handleRegister, loggedIn }) {
     <input className='entry__input entry__input_type_email' {...register('email',
      {
       required: 'Поле обязательно к заполнению',
-      pattern: { value: /^\S+@\S+\.\S+$/, message: 'Введите корректный адрес' }
+      pattern: { value: /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i, message: 'Введите корректный адрес' }
      }
     )}>
     </input>

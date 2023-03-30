@@ -2,7 +2,7 @@ import React, { useCallback, useEffect } from 'react';
 import { Route } from 'react-router-dom';
 import { Switch } from 'react-router-dom';
 import { UserContext } from '../../contexts/CurrentUserContext';
-import { getLogin, checkToken, getRegister } from '../../utils/MainApi';
+import { getLogin, checkToken, getRegister, updateUserData } from '../../utils/MainApi';
 import './App.css';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 import Header from '../Header/Header'
@@ -23,6 +23,10 @@ function App() {
     localStorage.setItem('loggedIn', true)
   }
 
+
+  function handleUpdateUser(token, name, email) {
+    return updateUserData(token, name, email)
+  }
 
   const tokenCheck = useCallback(async () => {
     try {
@@ -83,7 +87,7 @@ function App() {
           </Route>
           <ProtectedRoute path='/movies' loggedIn={loggedIn} component={Movies} />
           <ProtectedRoute path='/saved-movies' loggedIn={loggedIn} component={SavedMovies} />
-          <ProtectedRoute path='/profile' loggedIn={loggedIn} component={Profile} cbLogout={cbLogout} />
+          <ProtectedRoute path='/profile' loggedIn={loggedIn} component={Profile} cbLogout={cbLogout} handleUpdateUser={handleUpdateUser} />
           <Route path='/signin'>
             <Login handleLogin={cbLogin} loggedIn={loggedIn} />
           </Route>
