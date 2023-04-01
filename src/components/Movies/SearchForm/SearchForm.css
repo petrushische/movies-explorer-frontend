@@ -39,6 +39,10 @@
  margin: 0 auto;
 }
 
+.search-form__error_type_length {
+ margin: 0 auto;
+}
+
 .search-form__button-search {
  position: absolute;
  top: 70px;

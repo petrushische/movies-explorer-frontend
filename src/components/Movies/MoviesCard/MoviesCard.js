@@ -6,6 +6,7 @@ function MoviesCard({ card }) {
   function click() {
     setButton(!button)
   }
+
   return (
     <li className='card-list__card'>
       <div className='card-list__wrapper-img'>

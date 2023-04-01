@@ -2,15 +2,23 @@ import React from "react";
 import SearchForm from "./SearchForm/SearchForm";
 import MoviesCardList from "./MoviesCardList/MoviesCardList";
 function Movies() {
- const [movies, setMovies] = React.useState([])
+ const moviesStorage = JSON.parse(localStorage.getItem('movies')) || [];
+ const nullMoviesLength = localStorage.getItem('movies') && JSON.parse(localStorage.getItem('movies')).length < 1;
  const [loader, setLoader] = React.useState(false)
- const [error, setError] = React.useState(null)
+ const [requestError, setRequestError] = React.useState('')
+
  return (
   <section className="movies">
-   <SearchForm setMovies={setMovies} isLoader={setLoader} error={setError} />
-   {error}
-   <MoviesCardList movies={movies} loader={loader} />
+   <SearchForm isLoader={setLoader} setRequestError={setRequestError} />
+   {requestError.length === 0 ?
+    nullMoviesLength === true ?
+     <p className="search-form__error search-form__error_type_length">Ничего не найдено</p> : <MoviesCardList loader={loader} moviesStorage={moviesStorage} />
+    :
+    <p className='search-form__error search-form__error_type_fetch'>{requestError}</p>}
   </section>
  );
 }
 export default Movies
+
+
+/* <p className="search-form__error search-form__error_type_length">Ничего не найдено</p> */

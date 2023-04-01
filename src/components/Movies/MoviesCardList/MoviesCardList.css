@@ -36,6 +36,10 @@
  color: #FFFFFF;
 }
 
+.more__button-none {
+ display: none;
+}
+
 .more__button:hover {
  cursor: pointer;
  opacity: .3;
@@ -68,4 +72,6 @@
   width: 240px;
   margin-top: 61px;
  }
+
+
 }
