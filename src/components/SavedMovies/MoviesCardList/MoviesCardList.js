@@ -1,12 +1,14 @@
 import './MoviesCardList.css'
 import MoviesCard from '../MoviesCard/MoviesCard';
-import { cardsSave } from '../../../utils/dataCards';
-function MoviesCardList() {
+import React from 'react';
+
+function MoviesCardList({ handleDeleteMovies, save, setSave }) {
+
     return (
         <>
             <ul className='card-list card-list_type_save-movis' >
-                {cardsSave.map((elem) => (
-                    <MoviesCard card={elem} key={elem.id} />
+                {save.map((elem) => (
+                    <MoviesCard card={elem} key={elem.movieId} handleDeleteMovies={handleDeleteMovies} setSave={setSave} />
                 ))}
             </ul>
             <div className='void'></div>

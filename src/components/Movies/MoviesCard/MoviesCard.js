@@ -1,11 +1,54 @@
 import React from 'react';
 import './MoviesCard.css'
 import ok from '../../../images/ok.svg'
-function MoviesCard({ card }) {
-  const [button, setButton] = React.useState(false)
-  function click() {
-    setButton(!button)
+import { allMovies } from '../../../utils/MainApi';
+
+function MoviesCard({ card, handleSAveMovies, handleDeleteMovies, setSave, save }) {
+
+  const saveId = save.find(elem => elem.movieId === card.id)
+  const isSaved = save.some((i) => i.movieId === card.id)
+
+
+  function savedCard() {
+    handleSAveMovies(localStorage.getItem('jwt'), card)
+      .then((res) => {
+        console.log(res)
+        allMovies(localStorage.getItem('jwt'))
+          .then((res) => {
+            setSave(res)
+          })
+          .catch((err) => {
+            console.log(err)
+          })
+      })
+      .catch((err) => {
+        console.log(err)
+      })
   }
+
+  function deleteCard() {
+
+    handleDeleteMovies(saveId._id, localStorage.getItem('jwt'))
+      .then((res) => {
+        console.log(res)
+        allMovies(localStorage.getItem('jwt'))
+          .then((res) => {
+            setSave(res)
+          })
+          .catch((err) => {
+            console.log(err)
+          })
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+
+
+  }
+
+
+
+
 
   return (
     <li className='card-list__card'>
@@ -15,13 +58,13 @@ function MoviesCard({ card }) {
           } alt={card.nameRU} />
         </a>
       </div>
-      {
-        button ?
-          <button className='card-list__button-save card-list__button-save_type_ok' type='button' onClick={click}>
-            <img src={ok} alt='Галочка' />
-          </button>
-          : <button className='card-list__button-save' type='button' onClick={click}>Сохранить</button>
-      }
+      {isSaved ? <button className='card-list__button-save card-list__button-save_type_ok' type='button' >
+        <img src={ok} alt='Галочка' onClick={deleteCard} />
+      </button> : <button className='card-list__button-save' type='button' onClick={savedCard}>Сохранить</button>}
+
+
+
+
       <div className='card-list__wrapper'>
         <h2 className='card-list__title'>{card.nameRU}</h2>
         <div className='card-list__wrapper-time'>

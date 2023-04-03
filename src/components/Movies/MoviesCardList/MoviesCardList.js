@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import './MoviesCardList.css'
 import MoviesCard from '../MoviesCard/MoviesCard';
 import Preloader from "../Preloader/Preloader";
-function MoviesCardList({ loader, moviesStorage }) {
+function MoviesCardList({ loader, moviesStorage, handleSAveMovies, handleDeleteMovies, setSave, save }) {
   const [visibleButton, setVisibleButton] = React.useState(false)
 
 
@@ -19,7 +19,6 @@ function MoviesCardList({ loader, moviesStorage }) {
 
   function plusVisible480() {
     setVisible480(visible480 + 2)
-    console.log(visible480)
   }
 
   useEffect(() => {
@@ -43,6 +42,17 @@ function MoviesCardList({ loader, moviesStorage }) {
       setVisibleButton(false)
     }
   }, [visible1280, visible768, visible480, moviesStorage.length, size])
+  /*
+    useEffect(() => {
+      moviesStorage.forEach((mov) => {
+        save.forEach((savMov) => {
+          if (savMov.movieId === mov.id) {
+            setButton(true)
+          }
+        })
+      })
+    }, [])
+  */
   return (
     <>
       {loader ?
@@ -50,7 +60,7 @@ function MoviesCardList({ loader, moviesStorage }) {
         :
         <ul className='card-list'>
           {(size > 768 ? moviesStorage.slice(0, visible1280) : (size > 480 ? moviesStorage.slice(0, visible768) : moviesStorage.slice(0, visible480))).map((elem) => (
-            <MoviesCard card={elem} key={elem.id} />
+            <MoviesCard card={elem} key={elem.id} handleSAveMovies={handleSAveMovies} handleDeleteMovies={handleDeleteMovies} setSave={setSave} save={save} />
           ))}
         </ul>
       }

@@ -73,4 +73,62 @@ function updateUserData(token, name, email) {
     })
 }
 
-export { getRegister, getLogin, checkToken, updateUserData }
+function saveMovies(token, movie) {
+  return fetch('https://api.bibliofilms.nomoredomains.work/movies', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`,
+    },
+    body: JSON.stringify({
+      country: movie.country,
+      director: movie.director,
+      duration: movie.duration,
+      year: movie.year,
+      description: movie.description,
+      image: 'https://api.nomoreparties.co' + movie.image.url,
+      trailer: movie.trailerLink,
+      nameRU: movie.nameRU,
+      nameEN: movie.nameEN,
+      thumbnail: 'https://api.nomoreparties.co' + movie.image.previewUrl,
+      movieId: movie.id,
+    })
+  })
+    .then((res) => {
+      if (res.ok) {
+        return res.json()
+      }
+      return Promise.reject(res)
+    })
+}
+
+function deleteMovies(id, token) {
+  return fetch(`https://api.bibliofilms.nomoredomains.work/movies/${id}`, {
+    method: 'DELETE',
+    headers: {
+      'Authorization': `Bearer ${token}`,
+    }
+  })
+    .then((res) => {
+      if (res.ok) {
+        return res.json()
+      }
+      return Promise.reject(res)
+    })
+}
+
+function allMovies(token) {
+  return fetch('https://api.bibliofilms.nomoredomains.work/movies', {
+    headers: {
+      authorization: `Bearer ${token}`,
+    }
+  })
+    .then((res) => {
+      if (res.ok) {
+        return res.json()
+      }
+      return Promise.reject(res)
+    })
+}
+
+export { getRegister, getLogin, checkToken, updateUserData, saveMovies, deleteMovies, allMovies }

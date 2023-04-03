@@ -2,7 +2,7 @@ import React, { useCallback, useEffect } from 'react';
 import { Route } from 'react-router-dom';
 import { Switch } from 'react-router-dom';
 import { UserContext } from '../../contexts/CurrentUserContext';
-import { getLogin, checkToken, getRegister, updateUserData } from '../../utils/MainApi';
+import { getLogin, checkToken, getRegister, updateUserData, saveMovies, deleteMovies, allMovies } from '../../utils/MainApi';
 import './App.css';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 import Header from '../Header/Header'
@@ -19,14 +19,37 @@ import ErrorNotFound from '../ErrorNotFound/ErrorNotFound';
 function App() {
   const [loggedIn, setLoggedIn] = React.useState(false)
   const [userData, setUserData] = React.useState({})
+
+  const [save, setSave] = React.useState([])
+
+
   function loggin() {
     localStorage.setItem('loggedIn', true)
+  }
+
+  function handleSaveMovies(token, movie) {
+    return saveMovies(token, movie)
+  }
+
+  function handleDeleteMovies(id, token) {
+    return deleteMovies(id, token)
   }
 
 
   function handleUpdateUser(token, name, email) {
     return updateUserData(token, name, email)
   }
+
+  useEffect(() => {
+    allMovies(localStorage.getItem('jwt'))
+      .then((res) => {
+        setSave(res)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  }, [])
+
 
   const tokenCheck = useCallback(async () => {
     try {
@@ -85,8 +108,8 @@ function App() {
           <Route exact path='/'>
             <Main loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
           </Route>
-          <ProtectedRoute path='/movies' loggedIn={loggedIn} component={Movies} />
-          <ProtectedRoute path='/saved-movies' loggedIn={loggedIn} component={SavedMovies} />
+          <ProtectedRoute path='/movies' loggedIn={loggedIn} component={Movies} handleSAveMovies={handleSaveMovies} handleDeleteMovies={handleDeleteMovies} save={save} setSave={setSave} />
+          <ProtectedRoute path='/saved-movies' loggedIn={loggedIn} component={SavedMovies} handleDeleteMovies={handleDeleteMovies} save={save} setSave={setSave} />
           <ProtectedRoute path='/profile' loggedIn={loggedIn} component={Profile} cbLogout={cbLogout} handleUpdateUser={handleUpdateUser} />
           <Route path='/signin'>
             <Login handleLogin={cbLogin} loggedIn={loggedIn} />
