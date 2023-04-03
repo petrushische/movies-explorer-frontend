@@ -41,13 +41,15 @@ function App() {
   }
 
   useEffect(() => {
-    allMovies(localStorage.getItem('jwt'))
-      .then((res) => {
-        setSave(res)
-      })
-      .catch((err) => {
-        console.log(err)
-      })
+    if (localStorage.getItem('jwt')) {
+      allMovies(localStorage.getItem('jwt'))
+        .then((res) => {
+          setSave(res)
+        })
+        .catch((err) => {
+          console.log(err)
+        })
+    }
   }, [])
 
 
@@ -76,6 +78,13 @@ function App() {
       const data = await getLogin(email, password)
       localStorage.setItem('jwt', data.token)
       tokenCheck()
+      allMovies(localStorage.getItem('jwt'))
+        .then((res) => {
+          setSave(res)
+        })
+        .catch((err) => {
+          console.log(err)
+        })
     } catch (err) {
       throw err
     }
