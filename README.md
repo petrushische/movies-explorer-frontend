@@ -5,6 +5,9 @@ frontend дипломного проекта
 # Сылка на макет
 https://disk.yandex.ru/d/hcl8GmW9CZeIOQ
 
+# Сылка на pull request  
+https://github.com/petrushische/movies-explorer-frontend/pull/2
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
