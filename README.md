@@ -2,11 +2,16 @@
 
 frontend дипломного проекта
 
-# Сылка на макет
+# Ссылка на макет
 https://disk.yandex.ru/d/hcl8GmW9CZeIOQ
 
-# Сылка на pull request  
+# Ссылка на pull request  
 https://github.com/petrushische/movies-explorer-frontend/pull/2
+
+# Ссылка на сайт 
+https://bibliofilms.nomoredomains.work/
+
+
 
 # Getting Started with Create React App
 
