@@ -2,12 +2,12 @@ import './MoviesCardList.css'
 import MoviesCard from '../MoviesCard/MoviesCard';
 import React from 'react';
 
-function MoviesCardList({ handleDeleteMovies, save, setSave }) {
+function MoviesCardList({ handleDeleteMovies, save, setSave, sortArray }) {
 
     return (
         <>
             <ul className='card-list card-list_type_save-movis' >
-                {save.map((elem) => (
+                {(sortArray.length === 0 ? save : sortArray).map((elem) => (
                     <MoviesCard card={elem} key={elem.movieId} handleDeleteMovies={handleDeleteMovies} setSave={setSave} />
                 ))}
             </ul>
