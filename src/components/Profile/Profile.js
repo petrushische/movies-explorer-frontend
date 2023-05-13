@@ -58,15 +58,18 @@ function Profile({ cbLogout, handleUpdateUser }) {
     <section className='profile'>
       <h2 className='profile__title'>Привет, {user.name}!</h2>
       <form className='profile__form' onSubmit={handleSubmit(onSubmit)}>
+        <p className={`profile__placeholder profile__placeholder_type_name ${errors ? errors.name ? 'profile__placeholder_type_name-active' : null : null}`}>Имя</p>
+        <p className={`profile__placeholder profile__placeholder_type_email ${errors ? errors.name ? 'profile__placeholder_type_email-active' : null : null}`}>E-mail</p>
         <p className='profile__error profile__error_type_name'>{errors ? errors.name ? errors.name.message : null : null}</p>
-        <input className='profile__input profile__input_type_name' type='text' placeholder='Имя'  {...register('name',
+        <input className='profile__input profile__input_type_name' type='text'   {...register('name',
           {
             required: 'Поле обязательно к заполнению',
             minLength: { value: 2, message: 'минимум 2 символа' },
             maxLength: { value: 30, message: 'Максимум 30 символов' },
             pattern: { value: /^[а-яёА-ЯЁa-zA-Z\s-]+$/i, message: 'Поле может содержать только латиницу, кирилицу, пробелы и "-"' }
-          })}></input>
-        <input className='profile__input profile__input_type_email' placeholder='E-mail'  {...register('email',
+          })}>
+        </input>
+        <input className='profile__input profile__input_type_email'   {...register('email',
           {
             required: 'Поле обязательно к заполнению',
             pattern: { value: /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu, message: 'Введите корректный адрес' }
