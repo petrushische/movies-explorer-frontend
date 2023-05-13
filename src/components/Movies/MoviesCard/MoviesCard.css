@@ -15,7 +15,6 @@
 }
 
 .card-list__card:hover .card-list__button-save {
- display: block;
  cursor: pointer;
 }
 
@@ -37,7 +36,6 @@
 }
 
 .card-list__button-save {
- display: none;
  position: absolute;
  top: 14px;
  right: 14px;
@@ -51,7 +49,7 @@
  font-weight: 400;
  font-size: 10px;
  line-height: 9px;
- color: #FFFFFF;
+ color: #ffffff;
 }
 
 .card-list__button-save_type_ok {
@@ -75,7 +73,7 @@
  font-weight: 500;
  font-size: 13px;
  line-height: 16px;
- color: #FFFFFF;
+ color: #ffffff;
  max-width: 250px;
 }
 
@@ -84,9 +82,8 @@
  align-items: center;
  width: 52px;
  height: 18px;
- background: #2F2F2F;
+ background: #2f2f2f;
  border-radius: 3px;
-
 }
 
 .card-list__time {
@@ -97,7 +94,7 @@
  font-weight: 400;
  font-size: 11px;
  line-height: 10px;
- color: #8B8B8B;
+ color: #8b8b8b;
 }
 
 @media screen and (max-width: 1270px) {
@@ -126,8 +123,6 @@
  .card-list__card:nth-child(n+9) {
   display: none;
  }*/
-
-
 }
 
 @media screen and (max-width: 400px) {
@@ -146,5 +141,4 @@
   display: none;
  }
 */
-
 }
