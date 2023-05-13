@@ -4,7 +4,7 @@ import { UserContext } from '../../contexts/CurrentUserContext';
 import React, { useEffect } from 'react';
 
 
-function Profile({ cbLogout, handleUpdateUser }) {
+function Profile({ cbLogout, handleUpdateUser, setUserData }) {
   const userData = React.useContext(UserContext)
   const [user, setUser] = React.useState(userData)
   const [disable, setDisable] = React.useState(true)
@@ -24,8 +24,11 @@ function Profile({ cbLogout, handleUpdateUser }) {
     setValue("email", userData.email);
   }, [userData, setValue]);
 
+
+
   watch((value) => {
-    if (value.name === userData.name || value.email === userData.email) {
+    console.log(userData)
+    if (value.name === userData.name && value.email === userData.email) {
       setDisable(false)
     } else {
       setDisable(true)
@@ -42,6 +45,7 @@ function Profile({ cbLogout, handleUpdateUser }) {
     handleUpdateUser(localStorage.getItem('jwt'), data.name, data.email)
       .then((res) => {
         setUser(res)
+        setUserData(res)
         setSuccess('Данные успешно изменены')
         setTimeout(clearSuccess, 2000)
       })

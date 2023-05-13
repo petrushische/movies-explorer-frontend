@@ -109,6 +109,7 @@ function App() {
   useEffect(() => {
     tokenCheck()
   }, [tokenCheck])
+
   return (
     <>
       <UserContext.Provider value={userData}>
@@ -119,7 +120,7 @@ function App() {
           </Route>
           <ProtectedRoute path='/movies' loggedIn={loggedIn} component={Movies} handleSAveMovies={handleSaveMovies} handleDeleteMovies={handleDeleteMovies} save={save} setSave={setSave} />
           <ProtectedRoute path='/saved-movies' loggedIn={loggedIn} component={SavedMovies} handleDeleteMovies={handleDeleteMovies} save={save} setSave={setSave} />
-          <ProtectedRoute path='/profile' loggedIn={loggedIn} component={Profile} cbLogout={cbLogout} handleUpdateUser={handleUpdateUser} />
+          <ProtectedRoute path='/profile' loggedIn={loggedIn} component={Profile} cbLogout={cbLogout} handleUpdateUser={handleUpdateUser} setUserData={setUserData} />
           <Route path='/signin'>
             <Login handleLogin={cbLogin} loggedIn={loggedIn} />
           </Route>
