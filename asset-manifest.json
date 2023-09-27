@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/movies-explorer-frontend/static/css/main.530960ad.css",
+    "main.js": "/movies-explorer-frontend/static/js/main.d89ece06.js",
+    "static/js/787.5fef94a4.chunk.js": "/movies-explorer-frontend/static/js/787.5fef94a4.chunk.js",
+    "static/media/My-foto.jpg": "/movies-explorer-frontend/static/media/My-foto.c4ddad3b3bbe1e2f2e3c.jpg",
+    "static/media/Inter-Medium.woff?v=3.19": "/movies-explorer-frontend/static/media/Inter-Medium.9053572c46aeb4b16caa.woff",
+    "static/media/Inter-Black.woff?v=3.19": "/movies-explorer-frontend/static/media/Inter-Black.c6938660eec019fefd68.woff",
+    "static/media/Inter-Regular.woff?v=3.19": "/movies-explorer-frontend/static/media/Inter-Regular.8c206db99195777c6769.woff",
+    "static/media/Inter-Medium.woff2?v=3.19": "/movies-explorer-frontend/static/media/Inter-Medium.293fd13dbca5a3e450ef.woff2",
+    "static/media/Inter-Black.woff2?v=3.19": "/movies-explorer-frontend/static/media/Inter-Black.15ca31c0a2a68f76d2d1.woff2",
+    "static/media/Inter-Regular.woff2?v=3.19": "/movies-explorer-frontend/static/media/Inter-Regular.c8ba52b05a9ef10f4758.woff2",
+    "static/media/banner__logo.svg": "/movies-explorer-frontend/static/media/banner__logo.4a7e65f596a0d095848cb4711bfbcef2.svg",
+    "static/media/logo.svg": "/movies-explorer-frontend/static/media/logo.6427ffc3dd1ac70c1e165d30d5f6bc3c.svg",
+    "index.html": "/movies-explorer-frontend/index.html",
+    "static/media/Lupa.svg": "/movies-explorer-frontend/static/media/Lupa.15e54325af65abb37e10d7fcf169e4b9.svg",
+    "static/media/close.svg": "/movies-explorer-frontend/static/media/close.023b0162a1c1e3a955f91498e473613a.svg",
+    "static/media/3-polosky.svg": "/movies-explorer-frontend/static/media/3-polosky.bc3f6448b5d51ce28967.svg",
+    "static/media/Close-side-bar.svg": "/movies-explorer-frontend/static/media/Close-side-bar.4828fddbd650ab863f28.svg",
+    "static/media/strelka-aboutMe.svg": "/movies-explorer-frontend/static/media/strelka-aboutMe.bd2ba961cfad92f555cb31c4baed17a3.svg",
+    "static/media/ok.svg": "/movies-explorer-frontend/static/media/ok.2028b2a93020ead46ac19ab54a199afb.svg",
+    "static/media/krug_black.svg": "/movies-explorer-frontend/static/media/krug_black.13dec6acbc5c35bc365e.svg",
+    "static/media/Krug.svg": "/movies-explorer-frontend/static/media/Krug.17a3e42f33077c3a2224.svg",
+    "main.530960ad.css.map": "/movies-explorer-frontend/static/css/main.530960ad.css.map",
+    "main.d89ece06.js.map": "/movies-explorer-frontend/static/js/main.d89ece06.js.map",
+    "787.5fef94a4.chunk.js.map": "/movies-explorer-frontend/static/js/787.5fef94a4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.530960ad.css",
+    "static/js/main.d89ece06.js"
+  ]
+}
