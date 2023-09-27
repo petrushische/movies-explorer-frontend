@@ -14,4 +14,4 @@
 - сервер для хранения данных (написанный самостоятельно) (В данный момент сервер не на хостинге)
 - хранение данных в localStorage
 
-## Ссылка на проект :https://petrushische.github.io/react-mesto-auth/
+## Ссылка на проект :https://petrushische.github.io/movies-explorer-frontend/
