@@ -36,6 +36,10 @@
  color: #FFFFFF;
 }
 
+.more__button-none {
+ display: none;
+}
+
 .more__button:hover {
  cursor: pointer;
  opacity: .3;
@@ -56,7 +60,7 @@
  }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 480px) {
  .card-list {
   width: 94%;
   margin-top: 40px;
@@ -68,4 +72,6 @@
   width: 240px;
   margin-top: 61px;
  }
+
+
 }

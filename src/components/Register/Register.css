@@ -36,6 +36,31 @@
  height: 100%;
 }
 
+.entry__error {
+ margin: 0;
+ margin-bottom: 12px;
+ font-style: normal;
+ font-weight: 400;
+ font-size: 10px;
+ line-height: 12px;
+ color: #EE3465;
+}
+
+.entry__api-error {
+ margin: 0;
+ text-align: center;
+ font-style: normal;
+ font-weight: 400;
+ font-size: 10px;
+ line-height: 12px;
+ color: #EE3465;
+ margin-bottom: 12px;
+}
+
+.entry__error_type_password {
+ margin-bottom: 140px;
+}
+
 .entry__input-name {
  margin: 0;
  margin-bottom: 5px;
@@ -65,7 +90,7 @@
 
 
 .entry__input_type_name {
- margin-bottom: 24px;
+ margin-bottom: 12px;
 }
 
 .entry__input_type_name:focus {
@@ -73,7 +98,7 @@
 }
 
 .entry__input_type_email {
- margin-bottom: 24px;
+ margin-bottom: 12px;
 }
 
 .entry__input_type_email:focus {
@@ -81,7 +106,7 @@
 }
 
 .entry__input_type_password {
- margin-bottom: 152px;
+ margin-bottom: 12px;
 }
 
 .entry__input_type_password:focus {
@@ -99,6 +124,10 @@
  font-size: 14px;
  line-height: 17px;
  color: #FFFFFF;
+}
+
+.entry__button-register-disabled {
+ background: #a6b0c2;
 }
 
 .entry__button-register:hover {
@@ -159,6 +188,10 @@
   align-items: center;
  }
 
+ .entry__error {
+  max-width: 260px;
+ }
+
  .entry__input-name {
   width: 260px;
  }
@@ -167,9 +200,10 @@
   width: 260px;
  }
 
- .entry__input_type_password {
-  margin-bottom: 240px;
+ .entry__error_type_password {
+  margin-bottom: 228px;
  }
+
 
  .entry__button-register {
   width: 260px;

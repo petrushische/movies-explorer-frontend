@@ -8,6 +8,10 @@
  display: none;
 }
 
+.header-dark-color-blue {
+ background: #073042;
+}
+
 .header-dark__wrapper {
  max-width: 1140px;
  width: 100%;
@@ -76,6 +80,10 @@
  line-height: 16px;
  color: #FFFFFF;
  border-radius: 20px;
+}
+
+.header-dark__account-color-blue {
+ background: #214352;
 }
 
 .header-dark__account:hover {

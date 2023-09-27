@@ -16,7 +16,9 @@ function NavigationDark() {
  return (
   <>
    <header className={`header-dark ${pathname === '/signin' || pathname === '/signup' ? 'header-dark-hidden' : ''} 
-   ${pathname !== '/' & pathname !== '/movies' & pathname !== '/saved-movies' & pathname !== '/profile' & pathname !== '/signin' & pathname !== '/signup' ? 'header-dark-hidden' : ''}`}>
+   ${pathname !== '/' && pathname !== '/movies' && pathname !== '/saved-movies' && pathname !== '/profile' && pathname !== '/signin' && pathname !== '/signup' ? 'header-dark-hidden' : ''}
+   ${pathname === '/' ? 'header-dark-color-blue' : ''}
+   `}>
     <nav className="header-dark__wrapper">
      <Link to='/'>
       <img src={logo} alt="Логотип" className="header-dark__logo" />
@@ -30,7 +32,7 @@ function NavigationDark() {
       </Link>
      </div>
      <Link to='/profile'>
-      <button className='header-dark__account' type='button'>Аккаунт</button>
+      <button className={`header-dark__account ${pathname === '/' ? 'header-dark__account-color-blue' : ''}`} type='button'>Аккаунт</button>
      </Link>
      <button className='header-dark__side-bar' onClick={handleClickIsOpen}></button>
     </nav>

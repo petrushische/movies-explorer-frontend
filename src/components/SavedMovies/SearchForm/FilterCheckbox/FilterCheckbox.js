@@ -1,15 +1,10 @@
 import React from "react";
 import './FilterCheckbox.css'
-function FilterCheckbox() {
- const [check, setCheck] = React.useState(false)
- function handleChangeCheck() {
-  setCheck(!check)
- }
-
+function FilterCheckbox({ handleCheckbox, checkboxValue }) {
  return (
   <>
    <label className="search-form__label" htmlFor="checkbox">
-    <input type="checkbox" className='search-form__checkbox' onClick={handleChangeCheck}></input>
+    <input type="checkbox" className='search-form__checkbox' checked={checkboxValue} onChange={handleCheckbox}></input>
     <p id='checkbox-text'>Короткометражки</p>
    </label>
   </>
